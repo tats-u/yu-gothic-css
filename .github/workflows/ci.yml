@@ -1,0 +1,27 @@
+name: Regular CI
+on:
+  push:
+    branches:
+      - main
+      - next
+      - "nopr/*"
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24.x'
+          registry-url: 'https://registry.npmjs.org'
+      - uses: pnpm/action-setup@v6
+        with:
+          run_install: true
+      - name: Check
+        run: node --run check
+      - name: Build website
+        run: node --run build

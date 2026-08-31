@@ -1,0 +1,169 @@
+---
+import "yu-gothic-css";
+
+type LayoutProps = {
+  lang?: string;
+  title: string;
+};
+
+type AstroProps =
+  | LayoutProps
+  | {
+      frontmatter: LayoutProps & Record<string, unknown>;
+    };
+
+const props = Astro.props as AstroProps;
+const { lang = "ja", title } =
+  "frontmatter" in props ? props.frontmatter : props;
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <style is:global>
+      :root {
+        --ja-font: "Yu Gothic Weight Fixed", YuGothic;
+
+        &:has(#font-selector [name="font"][value="meiryo"]:checked) {
+          --ja-font: "Meiryo";
+        }
+
+        &:has(#font-selector [name="font"][value="noto-sans-jp"]:checked) {
+          --ja-font:
+            "Noto Sans JP", "Noto Sans CJK", "Noto Sans CJK JP",
+            "Source Han Sans VF", "Source Han Sans JP VF";
+        }
+
+        &:has(#font-options [name="palt"][value="headings"]:checked) :is(h1, h2, h3, h4, h5, h6), &:has(#font-options [name="palt"][value="all"]:checked) {
+          font-feature-settings: "palt";
+        }
+
+        &:has(#font-options [name="horizontal-kana"]:checked) {
+          font-feature-settings: "hkna";
+        }
+
+        &:has(#font-options [name="palt"][value="headings"]:checked):has(#font-options [name="horizontal-kana"]:checked) :is(h1, h2, h3, h4, h5, h6), &:has(#font-options [name="palt"][value="all"]:checked):has(#font-options [name="horizontal-kana"]:checked) {
+          font-feature-settings: "palt", "hkna";
+        }
+      }
+
+      :root, [lang] {
+        font-family: sans-serif;
+      }
+      :is(:root, [lang]):where(:lang(en)) {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Roboto, Oxygen-Sans,
+          Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      }
+      @media print {
+        :is(:root, [lang]):where(:lang(en)) {
+          font-family: "Aptos", "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+      }
+
+      :is(:root, [lang]):where(:lang(ja)) {
+        font-family: var(--ja-font), sans-serif;
+        text-autospace: normal;
+      }
+
+      ruby {
+        font-variant-east-asian: ruby;
+      }
+
+      #font-controls:has([name="font"][value="meiryo"]:checked) label:has([name="palt"]:not([value="none"])) {
+        text-decoration: line-through;
+      }
+
+      #font-controls:has([name="font"]:is([value="meiryo"],[value="noto-sans-jp"]):checked) label:has([name="horizontal-kana"]) {
+        text-decoration: line-through;
+      }
+
+      [lang]:not(:lang(ja)) #font-controls {
+        display: none;
+      }
+
+      @media print {
+        #font-controls {
+          display: none;
+        }
+      }
+
+      #font-controls {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        padding: 0.75rem 1rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+      }
+
+      pre {
+        padding: 1rem;
+        border-radius: 0.2rem;
+      }
+
+      .sesame_dot {
+        font-style: normal;
+        /* ゴマは縦書き用 */
+        text-emphasis: dot;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+    </style>
+    <style>
+      .body {
+        margin: 0 auto;
+        max-width: 60rem;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="body">{title}</h1>
+    <form id="font-controls" lang="ja">
+      <div id="font-selector">
+        <label title="日本語以外のWindowsではこれしか入っていないことが多いです（This is often the only one installed on non-Japanese Windows）">
+          <input type="radio" name="font" value="yu-gothic" checked />
+          游ゴシック（Yu Gothic）
+        </label>
+        <label title="三者の中では最も昔から使えて定評があるフォント（The most established and reliable font among the three）">
+          <input type="radio" name="font" value="meiryo" />
+          メイリオ（Meiryo）
+        </label>
+        <label title="2024年から日本語Windowsで搭載されたLinux系OSと共通のフォント（Common font for Linux-based OSes and Japanese Windows since 2024）">
+          <input type="radio" name="font" value="noto-sans-jp" />
+          Noto Sans JP
+        </label>
+      </div>
+      <div id="font-options" title="メイリオでは効果がありません（No effect for Meiryo）">
+        <label>
+          <input type="radio" name="palt" value="none" checked />
+          字詰めなし（No kerning）
+        </label>
+        <label>
+          <input type="radio" name="palt" value="headings" />
+          見出し字詰め（Kern headings）
+        </label>
+        <label>
+          <input type="radio" name="palt" value="all" />
+          全て字詰め（Kern all）
+        </label>
+        <label title="游ゴシックでのみ効果があります（Effective only for Yu Gothic）">
+          <input type="checkbox" name="horizontal-kana" />
+          横専用仮名（Horizontal-dedicated kana）
+        </label>
+      </div>
+    </form>
+    <div class="body">
+      <slot />
+    </div>
+  </body>
+</html>

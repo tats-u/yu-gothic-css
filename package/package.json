@@ -1,0 +1,42 @@
+{
+  "name": "yu-gothic-css",
+  "type": "module",
+  "types": "./index.d.ts",
+  "version": "0.0.0",
+  "description": "A CSS helper that defines a virtual Yu Gothic Weight Fix font so Japanese text uses a more balanced weight on Windows.",
+  "license": "MIT",
+  "author": "Tatsunori Uchino <tats.u@live.jp> (https://github.com/tats-u)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tats-u/yu-gothic-css.git",
+    "directory": "package"
+  },
+  "homepage": "https://github.com/tats-u/yu-gothic-css#readme",
+  "bugs": {
+    "url": "https://github.com/tats-u/yu-gothic-css/issues"
+  },
+  "keywords": [
+    "css",
+    "font",
+    "japanese",
+    "yu-gothic",
+    "webfont"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.css"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.css",
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

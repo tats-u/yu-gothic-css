@@ -1,0 +1,7 @@
+packages:
+  - "package"
+  - "website"
+allowBuilds:
+  esbuild: true
+catalog:
+  typescript: ~6.0.3

@@ -1,0 +1,28 @@
+{
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^12.1.0",
+      "onFail": "download"
+    }
+  },
+  "private": true,
+  "scripts": {
+    "check": "node --run lint && node --run typecheck",
+    "build": "pnpm --filter website build",
+    "lint": "biome check",
+    "typecheck": "pnpm --filter website exec astro sync && pnpm --filter website exec tsc --noEmit",
+    "fix": "biome check --fix",
+    "format": "biome check --fix",
+    "changeset": "changeset",
+    "changeset:version": "node scripts/changeset-version.js",
+    "changeset:publish": "node scripts/changeset-publish.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.11",
+    "@changesets/changelog-github": "^0.7.0",
+    "@changesets/cli": "^2.31.0",
+    "typescript": "catalog:"
+  }
+}

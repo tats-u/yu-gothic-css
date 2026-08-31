@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Yu Gothic Weight Fixed";
+  font-weight: 200;
+  src: local("Yu Gothic Light");
+}
+
+@font-face {
+  font-family: "Yu Gothic Weight Fixed";
+  font-weight: 300;
+  src: local("Yu Gothic Regular");
+}
+
+@font-face {
+  font-family: "Yu Gothic Weight Fixed";
+  font-weight: 400;
+  src: local("Yu Gothic Medium");
+}
+
+@font-face {
+  font-family: "Yu Gothic Weight Fixed";
+  font-weight: 600;
+  src: local("Yu Gothic Bold");
+}
