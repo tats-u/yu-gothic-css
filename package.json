@@ -15,8 +15,8 @@
     "fix": "biome check --fix",
     "format": "biome check --fix",
     "changeset": "changeset",
-    "changeset:version": "node scripts/changeset-version.js",
-    "changeset:publish": "node scripts/changeset-publish.js"
+    "changeset:version": "node scripts/changeset-version.ts",
+    "changeset:publish": "node scripts/changeset-publish.ts"
   },
   "type": "module",
   "devDependencies": {
