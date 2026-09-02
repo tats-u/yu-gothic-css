@@ -1,11 +1,4 @@
 {
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^12.1.0",
-      "onFail": "download"
-    }
-  },
   "private": true,
   "scripts": {
     "check": "node --run lint && node --run typecheck",
@@ -24,5 +17,6 @@
     "@changesets/changelog-github": "^0.7.0",
     "@changesets/cli": "^2.31.0",
     "typescript": "catalog:"
-  }
+  },
+  "packageManager": "pnpm@12.1.0"
 }
