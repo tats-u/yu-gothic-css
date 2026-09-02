@@ -30,11 +30,11 @@ jobs:
         id: changesets
         uses: changesets/action@v2
         with:
-          version: node --run changeset:version
-          publish: node --run changeset:publish
-          commit: Version Package (${{ github.ref_name }})
-          title: Version Package (${{ github.ref_name }})
-          createGithubReleases: true
+          version-script: node --run changeset:version
+          publish-script: node --run changeset:publish
+          commit-message: Version Package (${{ github.ref_name }})
+          pr-title: Version Package (${{ github.ref_name }})
+          create-github-releases: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
