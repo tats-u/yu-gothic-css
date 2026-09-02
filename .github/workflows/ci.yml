@@ -23,5 +23,26 @@ jobs:
           run_install: true
       - name: Check
         run: node --run check
+      - id: repository
+        run: echo "name=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}" >> $GITHUB_OUTPUT
       - name: Build website
-        run: node --run build
+        run: node --run build:website
+        env:
+          WEBSITE_BASE_PATH: "/${{ steps.repository.outputs.name }}/"
+          DEPLOYED_FROM_MAIN: "1"
+      - name: Upload website artifacts
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: website/dist
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+  update-website:
+    runs-on: ubuntu-slim
+    permissions:
+      id-token: write
+      pages: write
+    needs: build-website
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
