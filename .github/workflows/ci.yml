@@ -40,7 +40,7 @@ jobs:
     permissions:
       id-token: write
       pages: write
-    needs: build-website
+    needs: build
     steps:
       - name: Deploy
         id: deployment
