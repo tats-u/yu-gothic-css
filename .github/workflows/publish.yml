@@ -28,7 +28,7 @@ jobs:
           run_install: true
       - name: Create release PR or publish package
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
           version: node --run changeset:version
           publish: node --run changeset:publish
