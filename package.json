@@ -18,5 +18,5 @@
     "@changesets/cli": "^2.31.0",
     "typescript": "catalog:"
   },
-  "packageManager": "pnpm@12.1.0"
+  "packageManager": "pnpm@12.2.1"
 }
