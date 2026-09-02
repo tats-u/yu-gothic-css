@@ -3,6 +3,7 @@
   "scripts": {
     "check": "node --run lint && node --run typecheck",
     "build": "pnpm --filter website build",
+    "build:website": "pnpm --filter website build",
     "lint": "biome check",
     "typecheck": "pnpm --filter website exec astro sync && pnpm --filter website exec tsc --noEmit",
     "fix": "biome check --fix",
