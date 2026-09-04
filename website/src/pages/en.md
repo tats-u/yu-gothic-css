@@ -73,7 +73,7 @@ Chromium-based browsers have had a bug in the past where the lines of fonts were
 Yu Gothic has more features compared to Meiryo and Noto Sans JP. Features that are not available in Meiryo but are common with Noto Sans JP include the following:
 
 - Proportional spacing for kana and punctuation marks
-- Adjustment of spacing for consecutive quotes and brackets (Except for Firefox (as of now), the spacing for brackets and punctuation marks differs between Meiryo and other fonts)
+- Adjustment of spacing for consecutive quotes and brackets (In Chromium-based browsers (as of now), the spacing for brackets and punctuation marks differs between Meiryo and other fonts)
 - Italic for Japanese characters (The lack of support in Meiryo is intentional, but some browsers forcibly italicize them)
 
 Features that are not available in Noto Sans JP but are unique to Yu Gothic include the following:
