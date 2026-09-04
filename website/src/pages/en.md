@@ -4,7 +4,7 @@ title: "CSS for Yu Gothic"
 lang: en
 ---
 
-<span lang="ja">[日本語](./)</span>
+<span lang="ja">[日本語](../)</span>
 
 ## What is this?
 
