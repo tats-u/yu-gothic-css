@@ -6,6 +6,8 @@ lang: en
 
 <span lang="ja">[日本語](../)</span>
 
+[GitHub](https://github.com/tats-u/yu-gothic-css) / [npm](https://www.npmjs.com/package/yu-gothic-css)
+
 ## What is this?
 
 This CSS defines a dedicated virtual font name "Yu Gothic Weight Fix" to display the Windows version of Yu Gothic on websites with almost the same appropriate weight as other fonts. By importing this CSS and specifying "Yu Gothic Weight Fix" in `font-family`, you can display Yu Gothic with almost the same weight as other fonts.

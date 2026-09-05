@@ -5,6 +5,8 @@ title: "游ゴシック用CSS（CSS for Yu Gothic）"
 
 <span lang="en">[English](./en)</span>
 
+<span lang="en">[GitHub](https://github.com/tats-u/yu-gothic-css) / [npm](https://www.npmjs.com/package/yu-gothic-css)</span>
+
 ## これは何
 
 このCSSは、Windows版の游ゴシックをWebサイトで他のフォントとほぼ同じ適正な太さで表示するために、専用の仮想フォント名「Yu Gothic Weight Fix」を定義するものです。このCSSをインポートし、`font-family`に「Yu Gothic Weight Fix」を指定することで、他のフォントとほぼ同じ太さで游ゴシックを表示することができます。
