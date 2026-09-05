@@ -1,7 +1,6 @@
 # CSS for Yu Gothic
 
 [![Version](https://img.shields.io/npm/v/yu-gothic-css)](https://npmjs.com/package/yu-gothic-css)
-![Node Current](https://img.shields.io/node/v/yu-gothic-css)
 [![NPM Downloads](https://img.shields.io/npm/dm/yu-gothic-css)](https://npmjs.com/package/yu-gothic-css)
 [![NPM Last Update](https://img.shields.io/npm/last-update/yu-gothic-css)](https://npmjs.com/package/yu-gothic-css)
 [![Socket Badge](https://badge.socket.dev/npm/package/yu-gothic-css)](https://socket.dev/npm/package/yu-gothic-css)
