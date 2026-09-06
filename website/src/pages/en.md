@@ -60,9 +60,9 @@ Of course, you can place "Yu Gothic Weight Fix" before Noto Sans CJK and Noto Sa
 
 I have prepared sample pages that display Japanese novels whose copyright has expired using Yu Gothic, Meiryo, and Noto Sans JP.
 
-- [<span lang="ja">吾輩は猫である</span> (I Am a Cat)](./i-am-a-cat)
-- [<span lang="ja">注文の多い料理店</span> (The Restaurant of Many Orders)](./the-restaurant-of-many-orders)
-- [<span lang="ja">ポラーノの広場</span> (Porano Square)](./porano-square)
+- [<span lang="ja">吾輩は猫である</span> (I Am a Cat)](../i-am-a-cat)
+- [<span lang="ja">注文の多い料理店</span> (The Restaurant of Many Orders)](../the-restaurant-of-many-orders)
+- [<span lang="ja">ポラーノの広場</span> (Porano Square)](../porano-square)
 
 The text is partially modified from [Aozora Bunko](https://www.aozora.gr.jp/) as of August 23, 2026. Characters outside the JIS X 0208 range are converted from images and annotations to Unicode. Parts other than the beginning may be omitted.
 
