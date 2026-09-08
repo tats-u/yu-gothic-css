@@ -68,7 +68,7 @@ The text is partially modified from [Aozora Bunko](https://www.aozora.gr.jp/) as
 
 ## Wait, isn't Meiryo or Noto Sans JP (alone) good enough?
 
-**In fact, these fonts are only pre-installed on Japanese versions of Windows (as you might suspect). On non-Japanese versions of Windows, the only Japanese fonts that are pre-installed are Yu Gothic and Yu Gothic UI.** Even Meiryo is not included. On non-Japanese versions of Windows, when displaying Japanese pages on websites, Yu Gothic will be used, so if you also consider non-native Japanese viewers, you cannot avoid this Yu Gothic issue.
+**In fact, these fonts are only pre-installed on Japanese versions of Windows (as you might suspect). On non-Japanese versions of Windows, the only Japanese fonts that are pre-installed are Yu Gothic and Yu Gothic UI.** Even Yu Mincho (serif version of Yu Gothic) is not included. On non-Japanese versions of Windows, when displaying Japanese pages on websites, Yu Gothic will be used, so if you also consider non-native Japanese viewers, you cannot avoid this Yu Gothic issue.
 
 Chromium-based browsers have had a bug in the past where the lines of fonts were displayed excessively thin. Combined with the aforementioned characteristics of Yu Gothic, this has led to a poor reputation for Yu Gothic on websites, overshadowed by Meiryo and Noto Sans JP.
 
@@ -95,7 +95,7 @@ Yu Gothic itself is a font that has received a certain level of evaluation in DT
 
 Not limited to the Windows version, Yu Gothic is actually thinner compared to other fonts than the value of `font-weight` or the suffix indicating the weight (Regular, Bold, etc.) would suggest.
 
-For example, Yu Gothic Regular is thinner than the Regular of other common fonts (e.g. Segoe UI, Inter, and Noto Sans JP) and is only about the thickness of SemiLight. To match the thickness of Regular in other fonts, you need to use Yu Gothic Medium.
+For example, Yu Gothic Regular is thinner than the Regular of other common fonts (e.g. Segoe UI, Inter, and Noto Sans JP) and is only about the thickness of SemiLight (Segoe UI) or Light (most of the rest). To match the thickness of Regular in other fonts, you need to use Yu Gothic Medium.
 
 Also, this is not limited to Yu Gothic, but the Bold weight included in Japanese fonts other than Noto Sans JP (Source Han Sans) and Meiryo is only about the thickness of SemiBold for Latin fonts like Segoe UI and Inter. Therefore, Yu Gothic lacks a bit of contrast between bold and regular compared to Noto Sans and Meiryo.
 
@@ -105,7 +105,7 @@ Also, this is not limited to Yu Gothic, but the Bold weight included in Japanese
 
 When you bold Yu Gothic Medium on Windows, it becomes a forcibly created bold through pseudo-bold processing, like MS Gothic. The bold created in this way, especially when printed, has blurred character outlines and looks unattractive.
 
-If you want to use Yu Gothic Medium and bold in Office, you need to take the very cumbersome step of changing the part you want to bold to regular Yu Gothic (Regular) and then pressing the bold button.
+If you want to use Yu Gothic Medium and Bold in Office, you need to take the very cumbersome step of changing the part you want to bold to regular Yu Gothic (Regular) and then pressing the bold button.
 
   </dd>
 </dl>
