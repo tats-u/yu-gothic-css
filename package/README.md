@@ -24,6 +24,12 @@ Then, in a framework that supports global CSS imports (such as Astro), import th
 import "yu-gothic-css";
 ```
 
+Alternatively, you can directly load it from a public CDN such as jsDelivr by adding a `<link>` tag.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yu-gothic-css/index.css">
+```
+
 This defines the virtual font name "Yu Gothic Weight Fix", so by specifying it in `font-family`, you can display Yu Gothic with almost the same weight as other fonts.
 
 If you prefer Yu Gothic to Noto Sans CJK, place "Yu Gothic Weight Fix" before Noto Sans CJK and Noto Sans JP in the `font-family` declaration.

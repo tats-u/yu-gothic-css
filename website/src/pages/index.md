@@ -25,6 +25,12 @@ pnpm add yu-gothic-css
 import "yu-gothic-css";
 ```
 
+または、jsDelivrなどのパブリックCDNから直接読み込む`<link>`タグを追加します。
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yu-gothic-css/index.css">
+```
+
 すると、「Yu Gothic Weight Fix」という仮想フォント名が定義されますので、`font-family`に指定することで、游ゴシックを他のフォントとほぼ同じ太さで表示することができます。
 
 ```css
