@@ -100,7 +100,7 @@ Windows版に限りませんが、游ゴシック（游ゴシック体）は、`
 
 例えば、游ゴシックのRegularは、他の一般的なフォント（例：Segoe UI・Inter・Noto Sans JP）のRegularに比べて細く、SemiLight（Segoe UI）またはLight（残りのほぼ全て）程度の太さしかありません。他のフォントのRegularと同じ太さにするには、游ゴシックのMediumを使う必要があります。
 
-Chromium系ブラウザでは、過去にフォントの線が過剰に細く表示されるというバグが存在していました。上述の游ゴシックの特性とのダブルパンチにより、Webサイト上における游ゴシックの世間での評価は地に落ち、メイリオやNoto Sans JPの影に隠れることになりました。
+[Chromium系ブラウザでは、過去にフォントの線が過剰に細く表示されるというバグが存在していました。](https://developer.chrome.com/blog/better-text-rendering-in-chromium-based-browsers-on-windows)上述の游ゴシックの特性とのダブルパンチにより、Webサイト上における游ゴシックの世間での評価は地に落ち、メイリオやNoto Sans JPの影に隠れることになりました。
 
 また、これは游ゴシックに限りませんが、Noto Sans JP（源ノ角ゴシック）やメイリオ以外の日本語フォントに付属しているBoldのウェイトは、ラテン文字用フォントのSemiBold程度の太さしかありません。このため、游ゴシックはNoto Sansやメイリオと比べて、太字と通常の太さの間のメリハリにやや欠けます。
 

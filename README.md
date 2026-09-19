@@ -66,7 +66,7 @@ Of course, you can place "Yu Gothic Weight Fix" before Noto Sans CJK and Noto Sa
 
 **In fact, these fonts are only pre-installed on Japanese versions of Windows (as you might suspect). On non-Japanese versions of Windows, the only Japanese fonts that are pre-installed are Yu Gothic and Yu Gothic UI.** Even Yu Mincho (serif version of Yu Gothic) is not included. On non-Japanese versions of Windows, when displaying Japanese pages on websites, Yu Gothic will be used, so if you also consider non-native Japanese viewers, you cannot avoid this Yu Gothic issue.
 
-Chromium-based browsers have had a bug in the past where the lines of fonts were displayed excessively thin. Combined with the aforementioned characteristics of Yu Gothic, this has led to a poor reputation for Yu Gothic on websites, overshadowed by Meiryo and Noto Sans JP.
+[Chromium-based browsers have had a bug in the past where the lines of fonts were displayed excessively thin.](https://developer.chrome.com/blog/better-text-rendering-in-chromium-based-browsers-on-windows) Combined with the aforementioned characteristics of Yu Gothic, this has led to a poor reputation for Yu Gothic on websites, overshadowed by Meiryo and Noto Sans JP.
 
 Yu Gothic has more features compared to Meiryo and Noto Sans JP. Features that are not available in Meiryo but are common with Noto Sans JP include the following:
 
