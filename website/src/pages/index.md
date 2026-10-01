@@ -9,7 +9,7 @@ title: "游ゴシック用CSS（CSS for Yu Gothic）"
 
 ## これは何
 
-このCSSは、Windows版の游ゴシックをWebサイトで他のフォントとほぼ同じ適正な太さで表示するために、専用の仮想フォント名「Yu Gothic Weight Fix」を定義するものです。このCSSをインポートし、`font-family`に「Yu Gothic Weight Fix」を指定することで、他のフォントとほぼ同じ太さで游ゴシックを表示することができます。
+このCSSは、Windows版の游ゴシックをWebサイトで他のフォントとほぼ同じ適正な太さで表示するために、専用の仮想フォント名「Yu Gothic Weight Fixed」を定義するものです。このCSSをインポートし、`font-family`に「Yu Gothic Weight Fixed」を指定することで、他のフォントとほぼ同じ太さで游ゴシックを表示することができます。
 
 ## 使い方
 
@@ -31,12 +31,12 @@ import "yu-gothic-css";
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yu-gothic-css/index.css">
 ```
 
-すると、「Yu Gothic Weight Fix」という仮想フォント名が定義されますので、`font-family`に指定することで、游ゴシックを他のフォントとほぼ同じ太さで表示することができます。
+すると、「Yu Gothic Weight Fixed」という仮想フォント名が定義されますので、`font-family`に指定することで、游ゴシックを他のフォントとほぼ同じ太さで表示することができます。
 
 ```css
 /* または[lang]:where(:lang(ja)) */
 [lang|=ja i] {
-  font-family: Hiragino Sans, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Yu Gothic Weight Fix, Meiryo, sans-serif;
+  font-family: Hiragino Sans, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Yu Gothic Weight Fixed, Meiryo, sans-serif;
 }
 ```
 
@@ -49,7 +49,7 @@ CSS変数を使う場合は、以下のように定義します。
 }
 
 [lang|=ja i] {
-  --lang-specific-font-family: Hiragino Sans, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Yu Gothic Weight Fix, Meiryo;
+  --lang-specific-font-family: Hiragino Sans, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Yu Gothic Weight Fixed, Meiryo;
 }
 ```
 
@@ -57,7 +57,7 @@ CSS変数を使う場合は、以下のように定義します。
 
 ```css
 [lang]:where(:lang(ja)) {
-  --lang-specific-font-family: Hiragino Sans, Yu Gothic Weight Fix, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Meiryo;
+  --lang-specific-font-family: Hiragino Sans, Yu Gothic Weight Fixed, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Meiryo;
 }
 ```
 

@@ -8,7 +8,7 @@
 
 ## What is this?
 
-This CSS defines a dedicated virtual font name "Yu Gothic Weight Fix" to display the Windows version of Yu Gothic on websites with almost the same appropriate weight as other fonts. By importing this CSS and specifying "Yu Gothic Weight Fix" in `font-family`, you can display Yu Gothic with almost the same weight as other fonts.
+This CSS defines a dedicated virtual font name "Yu Gothic Weight Fixed" to display the Windows version of Yu Gothic on websites with almost the same appropriate weight as other fonts. By importing this CSS and specifying "Yu Gothic Weight Fixed" in `font-family`, you can display Yu Gothic with almost the same weight as other fonts.
 
 ## How to use
 
@@ -30,14 +30,14 @@ Alternatively, you can directly load it from a public CDN such as jsDelivr by ad
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yu-gothic-css/index.css">
 ```
 
-This defines the virtual font name "Yu Gothic Weight Fix", so by specifying it in `font-family`, you can display Yu Gothic with almost the same weight as other fonts.
+This defines the virtual font name "Yu Gothic Weight Fixed", so by specifying it in `font-family`, you can display Yu Gothic with almost the same weight as other fonts.
 
-If you prefer Yu Gothic to Noto Sans CJK, place "Yu Gothic Weight Fix" before Noto Sans CJK and Noto Sans JP in the `font-family` declaration.
+If you prefer Yu Gothic to Noto Sans CJK, place "Yu Gothic Weight Fixed" before Noto Sans CJK and Noto Sans JP in the `font-family` declaration.
 
 ```css
 /* Or [lang]:where(:lang(ja)) */
 [lang|=ja i] {
-  font-family: Hiragino Sans, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Yu Gothic Weight Fix, Meiryo, sans-serif;
+  font-family: Hiragino Sans, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Yu Gothic Weight Fixed, Meiryo, sans-serif;
 }
 ```
 
@@ -50,15 +50,15 @@ If you want to use CSS variables, define them as follows.
 }
 
 [lang|=ja i] {
-  --lang-specific-font-family: Hiragino Sans, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Yu Gothic Weight Fix, Meiryo;
+  --lang-specific-font-family: Hiragino Sans, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Yu Gothic Weight Fixed, Meiryo;
 }
 ```
 
-Of course, you can place "Yu Gothic Weight Fix" before Noto Sans CJK and Noto Sans JP if you prefer Yu Gothic to Noto Sans CJK:
+Of course, you can place "Yu Gothic Weight Fixed" before Noto Sans CJK and Noto Sans JP if you prefer Yu Gothic to Noto Sans CJK:
 
 ```css
 [lang]:where(:lang(ja)) {
-  --lang-specific-font-family: Hiragino Sans, Yu Gothic Weight Fix, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Meiryo;
+  --lang-specific-font-family: Hiragino Sans, Yu Gothic Weight Fixed, Noto Sans CJK, Noto Sans CJK JP, Noto Sans JP, Meiryo;
 }
 ```
 
