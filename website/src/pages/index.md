@@ -100,6 +100,17 @@ Windows版に限りませんが、游ゴシック（游ゴシック体）は、`
 
 例えば、游ゴシックのRegularは、他の一般的なフォント（例：Segoe UI・Inter・Noto Sans JP）のRegularに比べて細く、SemiLight（Segoe UI）またはLight（残りのほぼ全て）程度の太さしかありません。他のフォントのRegularと同じ太さにするには、游ゴシックのMediumを使う必要があります。
 
+※次の例はWindowsでご覧ください。
+
+- <span class="yu-regular">游ゴシック（Regular）—ABCxyz123あいう漢字</span>
+- <span class="noto w-300">Noto Sans JP Light—ABCxyz123あいう漢字</span>
+- <span class="segoe w-350">Segoe UI Semilight—ABCxyz123</span>
+- <span class="inter w-300">Inter Variable Light—ABCxyz123</span>
+- <span class="yu-medium">游ゴシック（Medium）—ABCxyz123あいう漢字</span>
+- <span class="noto w-350">Noto Sans JP DemiLight—ABCxyz123あいう漢字</span>
+- <span class="segoe">Segoe UI—ABCxyz123</span>
+- <span class="inter">Inter Variable Regular—ABCxyz123</span>
+
 [Chromium系ブラウザでは、過去にフォントの線が過剰に細く表示されるというバグが存在していました。](https://developer.chrome.com/blog/better-text-rendering-in-chromium-based-browsers-on-windows)上述の游ゴシックの特性とのダブルパンチにより、Webサイト上における游ゴシックの世間での評価は地に落ち、メイリオやNoto Sans JPの影に隠れることになりました。
 
 また、これは游ゴシックに限りませんが、Noto Sans JP（源ノ角ゴシック）やメイリオ以外の日本語フォントに付属しているBoldのウェイトは、ラテン文字用フォントのSemiBold程度の太さしかありません。このため、游ゴシックはNoto Sansやメイリオと比べて、太字と通常の太さの間のメリハリにやや欠けます。
@@ -108,9 +119,15 @@ Windows版に限りませんが、游ゴシック（游ゴシック体）は、`
   <dt>游ゴシックのMediumの太字化に対応したウェイトがない</dt>
   <dd>
 
-Windows版の游ゴシック Mediumを太字化すると、ＭＳ ゴシックのように、擬似ボールド処理により無理やり作り出された太字になります。これによって作られた太字は、特に印刷した場合に、文字の輪郭がぼやけてしまい、見栄えが悪くなります。
+Windows版の游ゴシック Mediumには、太字に対応した別ウェイトが存在しません。無理やり太字化すると、ＭＳ ゴシックのように、擬似ボールド処理により無理やり作り出された太字になります。これによって作られた太字は、横方向には太くなりますが、縦方向にはそこまで太くならず見た目が悪い上、それでもBoldのウェイトに比べて細いです。
 
-Officeで游ゴシック Mediumと太字を使いたい場合、太字にしたい部分を通常の游ゴシック（Regular）にして太字ボタンを押すという非常に面倒な手段を取る必要があります。
+※次の例はWindowsでご覧ください。
+
+- **<span class="yu">これは游ゴシックの太字です。下よりも太く、太字でない箇所との間にメリハリが付きます。</span>**
+- <span class="yu-medium">**これは游ゴシック Mediumを無理やり太字化したものです。上の本物の太字と比べて太さが足りません。**</span>
+- **<span class="meiryo">参考までに、メイリオと</span><span class="noto">Noto Sans JPの太字です。游ゴシックのものよりさらに太いです。</span>**
+
+Officeで游ゴシック Mediumと太字を併用したい場合、太字にしたい部分を通常の游ゴシック（Regular）にして太字ボタンを押すという非常に面倒な手段を取る必要があります。
 
   </dd>
 </dl>

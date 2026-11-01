@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import "yu-gothic-css";
 
 type LayoutProps = {
@@ -26,9 +27,11 @@ const { lang = "ja", title } =
     <meta name="color-scheme" content="light dark" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <Font cssVariable="--font-inter" />
     <style is:global>
       :root {
         --ja-font: "Yu Gothic Weight Fixed", YuGothic;
+        --en-font: "";
 
         &:has(#font-selector [name="font"][value="meiryo"]:checked) {
           --ja-font: "Meiryo";
@@ -53,22 +56,81 @@ const { lang = "ja", title } =
         }
       }
 
+      .segoe {
+        --en-font: Segoe UI;
+      }
+
+      .inter {
+        --en-font: /*Inter Variable,*/ var(--font-inter);
+      }
+
+      .w-300 {
+        font-weight: 300;
+      }
+
+      .w-350 {
+        font-weight: 350;
+      }
+
+      .w-400 {
+        font-weight: 400;
+      }
+
       :root, [lang] {
         font-family: sans-serif;
       }
       :is(:root, [lang]):where(:lang(en)) {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Roboto, Oxygen-Sans,
           Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+        &:is(.yu, .yu-medium, .yu-regular, .meiryo, .noto), :is(.yu, .yu-medium, .yu-regular, .meiryo, .noto) & {
+          font-family: var(--ja-font), -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Roboto, Oxygen-Sans,
+          Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+
+        &:is(.segoe, .inter), :is(.segoe, inter) & {
+          font-family: var(--en-font), -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", Roboto, Oxygen-Sans,
+          Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
       }
       @media print {
         :is(:root, [lang]):where(:lang(en)) {
           font-family: "Aptos", "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+          &:is(.yu, .yu-medium, .yu-regular, .meiryo, .noto), :is(.yu, .yu-medium, .yu-regular, .meiryo, .noto) & {
+            font-family: var(--ja-font), "Aptos", "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          }
         }
       }
 
-      :is(:root, [lang]):where(:lang(ja)) {
+      .yu-regular {
+        --ja-font: Yu Gothic, YuGothic;
+      }
+
+      .yu {
+        --ja-font: "Yu Gothic Weight Fixed", YuGothic;
+      }
+
+      .yu-medium {
+        --ja-font: Yu Gothic Medium, YuGothic;
+      }
+
+      .noto {
+        --ja-font: "Noto Sans JP", "Noto Sans CJK", "Noto Sans CJK JP",
+            "Source Han Sans VF", "Source Han Sans JP VF";
+      }
+
+      .meiryo {
+        --ja-font: Meiryo;
+      }
+
+      :is(:root, [lang]):where(:lang(ja)), .yu, .meiryo, .yu-medium, .yu-regular, .noto {
         font-family: var(--ja-font), sans-serif;
         text-autospace: normal;
+      }
+
+      .segoe, .inter {
+        font-family: var(--en-font), sans-serif;
       }
 
       ruby {

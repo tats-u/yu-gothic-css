@@ -109,9 +109,15 @@ Also, this is not limited to Yu Gothic, but the Bold weight included in Japanese
   <dt>No weight corresponding to bold for Yu Gothic Medium</dt>
   <dd>
 
-When you bold Yu Gothic Medium on Windows, it becomes a forcibly created bold through pseudo-bold processing, like MS Gothic. The bold created in this way, especially when printed, has blurred character outlines and looks unattractive.
+The Windows version of Yu Gothic Medium does not have a separate weight that corresponds to bold. If you force it to be bold, it creates a pseudo-bold effect, much like MS Gothic, artificially generating bold text. Bold text created this way becomes thicker horizontally, but it does not get as thick vertically, resulting in a poor appearance, and it is still thinner compared to the actual Bold weight.
 
-If you want to use Yu Gothic Medium and Bold in Office, you need to take the very cumbersome step of changing the part you want to bold to regular Yu Gothic (Regular) and then pressing the bold button.
+\* Please view the following example on Windows:
+
+- **<span class="yu" lang="ja">これは游ゴシックの太字です。下よりも太く、太字でない箇所との間にメリハリが付きます。（<span lang="en">This is Yu Gothic bold. It is bolder than the text below, creating a clear contrast with the non-bold parts.</span>）</span>**
+- <span class="yu-medium" lang="ja">**これは游ゴシック Mediumを無理やり太字化したものです。上の本物の太字と比べて太さが足りません。（This is Yu Gothic Medium forcefully made bold. Compared to the real bold text above, it is not thick enough.）**</span>
+- **For your reference, this is bold in the default Latin font. It is even bolder than the Yu Gothic one and as bold as and is nearly the same as <span class="noto">Noto Sans JP</span> and <span class="meiryo">Meiryo</span>.**
+
+If you want to use both Yu Gothic Medium and Bold together in Office, you need to take the very cumbersome step of changing the part you want to bold to regular Yu Gothic (Regular) and then pressing the bold button.
 
   </dd>
 </dl>

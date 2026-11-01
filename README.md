@@ -99,9 +99,9 @@ Also, this is not limited to Yu Gothic, but the Bold weight included in Japanese
   <dt>No weight corresponding to bold for Yu Gothic Medium</dt>
   <dd>
 
-When you bold Yu Gothic Medium on Windows, it becomes a forcibly created bold through pseudo-bold processing, like MS Gothic. The bold created in this way, especially when printed, has blurred character outlines and looks unattractive.
+The Windows version of Yu Gothic Medium does not have a separate weight that corresponds to bold. If you force it to be bold, it creates a pseudo-bold effect, much like MS Gothic, artificially generating bold text. Bold text created this way becomes thicker horizontally, but it does not get as thick vertically, resulting in a poor appearance, and it is still thinner compared to the actual Bold weight.
 
-If you want to use Yu Gothic Medium and Bold in Office, you need to take the very cumbersome step of changing the part you want to bold to regular Yu Gothic (Regular) and then pressing the bold button.
+If you want to use both Yu Gothic Medium and Bold together in Office, you need to take the very cumbersome step of changing the part you want to bold to regular Yu Gothic (Regular) and then pressing the bold button.
 
   </dd>
 </dl>
